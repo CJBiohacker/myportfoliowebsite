@@ -11,6 +11,7 @@ html body {
   grid-template-areas: "header" "main" "footer";
   margin: 0;
   padding: 0;
+  width: 100dvw !important;
   height: 100dvh !important;
 }
 html body #nav-header {
@@ -23,7 +24,11 @@ html body #nav-header {
   align-items: center;
   margin: 0 10%;
 }
-html body #nav-header p {
+html body #nav-header > a {
+  text-decoration: none;
+  color: white;
+}
+html body #nav-header > a p {
   margin: 0;
 }
 html body #nav-header .nav-menu {
@@ -43,14 +48,15 @@ html body #main-container {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 600px;
-  margin: 0px 10dvw;
+  height: 100%;
+  margin: 80px 10dvw;
+  gap: 180px;
 }
-html body #main-container .profile-container {
+html body #main-container #profile .profile-container {
   display: grid;
   grid-template-columns: 65% 1fr;
 }
-html body #main-container .profile-container .profile-text {
+html body #main-container #profile .profile-container .profile-text {
   display: flex;
   flex-direction: column;
   align-items: self-start;
@@ -58,47 +64,116 @@ html body #main-container .profile-container .profile-text {
   font-weight: 500;
   font-size: 2.5rem;
 }
-html body #main-container .profile-container .profile-text #profile-title {
+html body #main-container #profile .profile-container .profile-text #profile-title {
   font-size: 5rem;
   margin: 0;
 }
-html body #main-container .profile-container .profile-text #profile-text {
+html body #main-container #profile .profile-container .profile-text #profile-text {
   font-size: 2.5rem;
-  margin: 0;
+  margin: 0 50px 0 0;
+  word-break: keep-all;
 }
-html body #main-container .profile-container .profile-text .pushable {
+html body #main-container #profile .profile-container .profile-text .pushable {
   background: hsl(300, 65%, 38.43%);
-  border-radius: 12px;
+  border-radius: 20px;
   border: none;
   padding: 0;
-  cursor: pointer;
   outline-offset: 4px;
+  cursor: pointer;
 }
-html body #main-container .profile-container .profile-text .front {
-  display: block;
-  padding: 12px 42px;
-  border-radius: 12px;
-  font-size: 3rem;
+html body #main-container #profile .profile-container .profile-text .front {
   background: #ca2bb5;
   color: white;
+  display: block;
+  padding: 12px 42px;
+  border-radius: 20px;
+  font-size: 2.5rem;
   transform: translateY(-6px);
 }
-html body #main-container .profile-container .profile-text .pushable:active .front {
+html body #main-container #profile .profile-container .profile-text .pushable:active .front {
   transform: translateY(-2px);
 }
-html body #main-container .profile-container .profile-photo {
+html body #main-container #profile .profile-container .profile-photo {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
 }
-html body #main-container .profile-container .profile-photo > img {
+html body #main-container #profile .profile-container .profile-photo > img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+}
+html body #main-container #about {
+  background-color: rgba(0, 56, 244, 0.3);
+  border-radius: 20px;
+  width: 100%;
+  margin: 50px 0;
+}
+html body #main-container #about .about-title {
+  font-size: 4rem;
+  margin: 50px 0 0 8%;
+}
+html body #main-container #about .about-container {
+  color: white;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 600px;
+}
+html body #main-container #about .about-container #about-image-area {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  padding: 50px;
+}
+html body #main-container #about .about-container #about-image-area > img {
+  width: 100%;
+  height: 100%;
+}
+html body #main-container #about .about-container #about-cards-container {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+html body #main-container #about .about-container #about-cards-container .about-card {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+html body #main-container #about .about-container #about-cards-container .about-card .about-card-image {
+  width: 120px;
+}
+html body #main-container #about .about-container #about-cards-container .about-card .text-card-container {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px 0 15px;
+}
+html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-title {
+  margin: 0;
+}
+html body #main-container #about .about-container #about-cards-container .card-0 {
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+html body #main-container #about .about-container #about-cards-container .card-1 {
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+html body #main-container #about .about-container #about-cards-container .card-2 {
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 html body .footer-container {
   grid-area: footer;
@@ -109,13 +184,14 @@ html body .footer-container {
   gap: 20px;
   margin: 0px 200px;
 }
-html body .footer-container #contact-year {
-  color: white;
-}
 html body .footer-container #contact-title {
-  font-size: larger;
+  font-size: 2rem;
   margin-bottom: 12px;
   color: white;
+}
+html body .footer-container #contact-year {
+  color: white;
+  font-size: 1.5rem;
 }
 html body .footer-container .contact-links {
   display: flex;
@@ -132,14 +208,39 @@ html body .footer-container .contact-links div .contact-icon {
 /* Ultra HD screens (2560px and up) */
 /* Extra large screens (1920px and up) */
 /* Large screens (1440px and up) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  html {
+    font-size: 10px;
+  }
+}
 /* Medium screens (1366px and up) */
+@media screen and (min-width: 1366px) and (max-width: 1439px) {
+  html {
+    font-size: 9px;
+  }
+}
 /* Small screens (1280px and up) */
+@media screen and (min-width: 1280px) and (max-width: 1365px) {
+  html {
+    font-size: 9px;
+  }
+}
 /* Extra small screens (810px and up) */
+@media screen and (min-width: 810px) and (max-width: 1279px) {
+  html {
+    font-size: 8px;
+  }
+}
 /* Mobile screens (412px and up) */
+@media screen and (min-width: 429px) and (max-width: 809px) {
+  html {
+    font-size: 6px;
+  }
+}
 /* Mobile screens (up to 411px) */
 @media screen and (max-width: 428px) {
   html {
-    font-size: 10px;
+    font-size: 6px;
   }
 }
 

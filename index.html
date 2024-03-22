@@ -12,12 +12,12 @@
 
   <body>
     <header id="nav-header">
-      <p>CJ Dev</p>
+      <a href="#profile" class="center-link"><p>CJ Dev</p></a>
       <nav class="nav-menu">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" class="center-link">About</a>
+        <a href="#experience" class="center-link">Experience</a>
+        <a href="#projects" class="center-link">Projects</a>
+        <a href="#contact" class="center-link">Contact</a>
       </nav>
     </header>
     <main id="main-container">
@@ -25,19 +25,34 @@
         <div class="profile-container">
             <div class="profile-text">
                 <h1 id="profile-title">Hi, I'm Carlos</h1>
-                <p id="profile-text">I am a Full Stack Developer with 2 years of professional experience using VueJS and NodeJS. <br> Let's schedule a meeting so you can find out more about me!</p>
-                <button class="pushable">
-                  <span class="front">
-                    Contact Me
-                  </span>
-                </button>
+                <p id="profile-text">
+                  I am a Full Stack Developer with 2 years of professional experience using VueJS and NodeJS.
+                  Let's schedule a meeting so you can find out more about me!
+                </p>
+                <div style="margin-top: 20px;">
+                  <button id="contact-button" class="pushable">
+                    <span class="front">
+                      Contact Me
+                    </span>
+                  </button>
+                </div>
             </div>
             <div class="profile-photo">
                 <img src="/assets/cj-dev-main-photo.svg" alt="cj-dev">
             </div>
         </div>
       </section>
-      <section id="about"></section>
+      <section id="about">
+        <h1 class="about-title">About</h1>
+        <div class="about-container">
+          <div id="about-image-area">
+            <img src="/assets/cj-dev-main-photo.svg" alt="">
+          </div>
+          <div id="about-cards-container">
+            <!-- Cards added via Javascript -->
+          </div>
+        </div>
+      </section>
       <section id="experience"></section>
       <section id="projects"></section>
     </main>
@@ -76,4 +91,5 @@
     </footer>
   </body>
 </html>
-<script async src="script.js"></script>
+<script defer src="script.js"></script>
+
