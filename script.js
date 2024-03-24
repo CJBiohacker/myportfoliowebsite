@@ -1,6 +1,7 @@
 const getElementFromId = (id) => document.getElementById(id);
 const getElementFromClass = (className) => document.querySelector(className);
-const getAllElementsFromClass = (className) => document.querySelectorAll(className);
+const getAllElementsFromClass = (className) =>
+  document.querySelectorAll(className);
 const createElement = (htmlTag) => document.createElement(htmlTag);
 const scrollToElement = (id) => {
   const element = getElementFromId(id);
@@ -18,31 +19,30 @@ const scrollToElement = (id) => {
   });
 };
 const hideNavMenu = () => {
-  window.innerWidth
+  window.innerWidth;
   if (window.innerWidth < 429) {
-    const container = document.getElementById('nav-menu');
-    container.style.display = 'none';
+    const container = document.getElementById("nav-menu");
+    container.style.display = "none";
   }
-}
-  console.log("🚀 ~ hideNavMenu ~ window.innerWidth:", window.innerWidth)
+};
 
 let isClicked = false;
 const aboutCardInfo = [
-    {
-        title: `FrontEnd Development`,
-        text: `Proficient in Front-End Development, with expertise in HTML, CSS, JavaScript, ReactJS, and VueJS. Skilled in crafting reusable components and designing responsive user interfaces and pages optimized for all devices.`,
-        image: `/assets/FrontEnd Development.svg`,
-    },
-    {
-        title: `BackEnd Development`,
-        text: `Experienced in Back-End development using Node.js to build robust REST APIs and establish software architecture with both SQL and NoSQL databases. Skilled in Software Testing with Jest to ensure high product quality and reliability.`,
-        image: `/assets/BackEnd Development.svg`,
-    },
-    {
-        title: `Cloud Development`,
-        text: `Certified with foundational knowledge of Google Cloud Platform, proficient in creating Cloud Solutions utilizing Container Orchestration, Virtual Machines, Cloud Storage, and IAM. Experienced in using Git and version control systems like GitHub, GitLab, and BitBucket for collaborative coding.`,
-        image: `/assets/Cloud Development.svg`,
-    },
+  {
+    title: `FrontEnd Development`,
+    text: `Proficient in Front-End Development, with expertise in HTML, CSS, JavaScript, ReactJS, and VueJS. Skilled in crafting reusable components and designing responsive user interfaces and pages optimized for all devices.`,
+    image: `/assets/FrontEnd Development.svg`,
+  },
+  {
+    title: `BackEnd Development`,
+    text: `Experienced in Back-End development using Node.js to build robust REST APIs and establish software architecture with both SQL and NoSQL databases. Skilled in Software Testing with Jest to ensure high product quality and reliability.`,
+    image: `/assets/BackEnd Development.svg`,
+  },
+  {
+    title: `Cloud Development`,
+    text: `Certified with foundational knowledge of Google Cloud Platform, proficient in creating Cloud Solutions utilizing Container Orchestration, Virtual Machines, Cloud Storage, and IAM. Experienced in using Git and version control systems like GitHub, GitLab, and BitBucket for collaborative coding.`,
+    image: `/assets/Cloud Development.svg`,
+  },
 ];
 
 const contactYear = getElementFromId("contact-year");
@@ -51,35 +51,36 @@ const cardContainer = getElementFromId("about-cards-container");
 const contactBtn = getElementFromId("contact-button");
 const navMenu = getElementFromId("nav-menu");
 const navActiveBtn = getElementFromId("nav-active-btn");
-const navLink = getAllElementsFromClass('.center-link');
-console.log("🚀 ~ navLink:", navLink)
+const navLink = getAllElementsFromClass(".center-link");
 
 const currentYear = new Date().getFullYear();
 
 for (let i = 0; i < 3; i++) {
-    let aboutCardDiv = createElement("div");
-    let aboutCardTextDiv = createElement("div");
-    let aboutCardTitle = createElement("h1");
-    let aboutCardText = createElement("p");
-    let aboutCardImage = createElement("img");
-    aboutCardDiv.classList.add("about-card", `card-${i}`);
-    cardContainer.appendChild(aboutCardDiv);
-    aboutCardDiv.appendChild(aboutCardImage);
-    aboutCardDiv.appendChild(aboutCardTextDiv);
-    aboutCardTextDiv.appendChild(aboutCardTitle);
-    aboutCardTextDiv.appendChild(aboutCardText);
-    aboutCardTextDiv.classList.add("text-card-container");
-    aboutCardImage.classList.add("about-card-image");
-    aboutCardTitle.classList.add("about-card-title");
-    aboutCardText.classList.add("about-card-text");
+  let aboutCardDiv = createElement("div");
+  let aboutCardTextDiv = createElement("div");
+  let aboutCardTitle = createElement("h1");
+  let aboutCardText = createElement("p");
+  let aboutCardImage = createElement("img");
+  aboutCardDiv.classList.add("about-card", `card-${i}`);
+  cardContainer.appendChild(aboutCardDiv);
+  aboutCardDiv.appendChild(aboutCardImage);
+  aboutCardDiv.appendChild(aboutCardTextDiv);
+  aboutCardTextDiv.appendChild(aboutCardTitle);
+  aboutCardTextDiv.appendChild(aboutCardText);
+  aboutCardTextDiv.classList.add("text-card-container");
+  aboutCardImage.classList.add("about-card-image");
+  aboutCardTitle.classList.add("about-card-title");
+  aboutCardText.classList.add("about-card-text");
 }
 
 const aboutCardClass = getAllElementsFromClass(".about-card");
 
 for (let i = 0; i < 3; i++) {
-    aboutCardClass[i].childNodes[0].src = aboutCardInfo[i].image;
-    aboutCardClass[i].childNodes[1].childNodes[0].innerText = aboutCardInfo[i].title;
-    aboutCardClass[i].childNodes[1].childNodes[1].innerText = aboutCardInfo[i].text;
+  aboutCardClass[i].childNodes[0].src = aboutCardInfo[i].image;
+  aboutCardClass[i].childNodes[1].childNodes[0].innerText =
+    aboutCardInfo[i].title;
+  aboutCardClass[i].childNodes[1].childNodes[1].innerText =
+    aboutCardInfo[i].text;
 }
 
 contactYear.innerText = `@${currentYear} All Rights Reserved`;
@@ -110,10 +111,10 @@ navActiveBtn.onclick = () => {
     navActiveBtn.style.borderColor = "transparent";
     navMenu.style.display = "none";
   }
-  
+
   isClicked = !isClicked;
 };
 
-navLink.forEach(link => {
-  link.addEventListener('click', hideNavMenu);
+navLink.forEach((link) => {
+  link.addEventListener("click", hideNavMenu);
 });
