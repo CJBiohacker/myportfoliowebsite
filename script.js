@@ -30,17 +30,17 @@ const aboutCardInfo = [
   {
     title: `FrontEnd Development`,
     text: `Proficient in Front-End Development, with expertise in HTML, CSS, JavaScript, ReactJS, and VueJS. Skilled in crafting reusable components and designing responsive user interfaces and pages optimized for all devices.`,
-    image: `/assets/FrontEnd Development.svg`,
+    image: `assets/FrontEnd Development.svg`,
   },
   {
     title: `BackEnd Development`,
     text: `Experienced in Back-End development using Node.js to build robust REST APIs and establish software architecture with both SQL and NoSQL databases. Skilled in Software Testing with Jest to ensure high product quality and reliability.`,
-    image: `/assets/BackEnd Development.svg`,
+    image: `assets/BackEnd Development.svg`,
   },
   {
     title: `Cloud Development`,
     text: `Certified with foundational knowledge of Google Cloud Platform, proficient in creating Cloud Solutions utilizing Container Orchestration, Virtual Machines, Cloud Storage, and IAM. Experienced in using Git and version control systems like GitHub, GitLab, and BitBucket for collaborative coding.`,
-    image: `/assets/Cloud Development.svg`,
+    image: `assets/Cloud Development.svg`,
   },
 ];
 
