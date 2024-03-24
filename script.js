@@ -17,7 +17,16 @@ const scrollToElement = (id) => {
     left: offsetX,
   });
 };
+const hideNavMenu = () => {
+  window.innerWidth
+  if (window.innerWidth < 429) {
+    const container = document.getElementById('nav-menu');
+    container.style.display = 'none';
+  }
+}
+  console.log("🚀 ~ hideNavMenu ~ window.innerWidth:", window.innerWidth)
 
+let isClicked = false;
 const aboutCardInfo = [
     {
         title: `FrontEnd Development`,
@@ -40,6 +49,10 @@ const contactYear = getElementFromId("contact-year");
 const centerLink = getElementFromId("center-link");
 const cardContainer = getElementFromId("about-cards-container");
 const contactBtn = getElementFromId("contact-button");
+const navMenu = getElementFromId("nav-menu");
+const navActiveBtn = getElementFromId("nav-active-btn");
+const navLink = getAllElementsFromClass('.center-link');
+console.log("🚀 ~ navLink:", navLink)
 
 const currentYear = new Date().getFullYear();
 
@@ -69,8 +82,6 @@ for (let i = 0; i < 3; i++) {
     aboutCardClass[i].childNodes[1].childNodes[1].innerText = aboutCardInfo[i].text;
 }
 
-console.log("🚀 ~ aboutCardClass:", )
-
 contactYear.innerText = `@${currentYear} All Rights Reserved`;
 
 contactBtn.onclick = () => {
@@ -89,4 +100,20 @@ document.querySelectorAll(".center-link").forEach((link) => {
     scrollToElement(targetId);
     e.preventDefault();
   });
+});
+
+navActiveBtn.onclick = () => {
+  if (!isClicked) {
+    navActiveBtn.style.borderColor = "white";
+    navMenu.style.display = "flex";
+  } else {
+    navActiveBtn.style.borderColor = "transparent";
+    navMenu.style.display = "none";
+  }
+  
+  isClicked = !isClicked;
+};
+
+navLink.forEach(link => {
+  link.addEventListener('click', hideNavMenu);
 });

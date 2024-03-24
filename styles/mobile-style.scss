@@ -1,0 +1,195 @@
+/* Mobile screens (up to 428px) */
+@media screen and (max-width: 428px) {
+  html {
+    font-size: 6px;
+
+    body {
+      #nav-header {
+        > a {
+
+          p {
+            font-size: 5rem;
+          }
+        }
+
+        #nav-active-btn {
+            display: block;
+            background-color: rgba($color: white, $alpha: 0);
+            border-color: rgba($color: black, $alpha: 0);
+            border-radius: 3px;
+            color: white;
+            padding: 5px 8px;
+        }
+
+        .nav-menu {
+          font-size: 5rem;
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          position: absolute;
+          right: 10%;
+          top: 15%;
+          width: 220px;
+          padding: 15px;
+          border-radius: 8px;
+          background-color: rgba($color: #966FCC, $alpha: 0.8);
+          
+
+          > a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+
+      #main-container {
+        margin: 0;
+        gap: 0;
+
+        #profile {
+          .profile-container {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            .profile-text-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              #profile-title {
+                font-size: 8rem;
+                margin: 30px;
+              }
+
+              #profile-text {
+                font-size: 5rem;
+                text-align: center;
+                margin: 0;
+                padding: 0 15px;
+              }
+
+              .pushable {
+              }
+
+              .front {
+              }
+
+              .pushable:active .front {
+                transform: translateY(-2px);
+              }
+            }
+
+            .profile-photo {
+              width: 75dvw;
+
+              > img {
+              }
+            }
+          }
+        }
+
+        #about {
+            height: 100dvh;
+
+            @media screen and (max-width: 360px) {
+                height: 1100px;
+              }
+
+          .about-title {
+            margin: 32px 0;
+            font-size: 6rem;
+            text-align: center;
+          }
+
+          .about-container {
+            display: flex;
+
+            #about-image-area {
+                display: none;
+
+              > img {
+                display: none;
+              }
+            }
+
+            #about-cards-container {
+                gap: 20px;
+
+              .about-card {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .about-card-image {
+                  padding: 0 0 0 15px;
+                  width: 120px;
+                }
+                .text-card-container {
+                  font-size: 2em;
+                  display: flex;
+                  flex-direction: column;
+                  padding: 0 15px;
+
+                  .about-card-title {
+                    margin: 0;
+                    font-size: 3rem;
+                  }
+                  .about-card-text {
+                    font-size: 3rem;
+                  }
+                }
+              }
+
+              .card-0 {
+                grid-row-start: 1;
+                grid-row-end: 1;
+              }
+              .card-1 {
+                grid-row-start: 2;
+                grid-row-end: 2;
+              }
+              .card-2 {
+                grid-row-start: 3;
+                grid-row-end: 3;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-container {
+        margin: 0;
+
+        #contact-title {
+          font-size: 5rem;          
+        }
+
+        #contact-year {
+          color: white;
+          font-size: 2.5rem;
+        }
+
+        .contact-links {
+          display: flex;
+          justify-content: center;
+          gap: 36px;
+
+          div {
+            padding: 20px;
+
+            .contact-icon {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

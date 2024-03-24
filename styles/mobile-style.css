@@ -1,0 +1,154 @@
+/* Mobile screens (up to 428px) */
+@media screen and (max-width: 428px) {
+  html {
+    font-size: 6px;
+  }
+  html body #nav-header > a p {
+    font-size: 5rem;
+  }
+  html body #nav-header #nav-active-btn {
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    color: white;
+    padding: 5px 8px;
+  }
+  html body #nav-header .nav-menu {
+    font-size: 5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    width: 220px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(150, 111, 204, 0.8);
+  }
+  html body #nav-header .nav-menu > a {
+    text-decoration: none;
+    color: white;
+  }
+  html body #main-container {
+    margin: 0;
+    gap: 0;
+  }
+  html body #main-container #profile .profile-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  html body #main-container #profile .profile-container .profile-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  html body #main-container #profile .profile-container .profile-text-container #profile-title {
+    font-size: 8rem;
+    margin: 30px;
+  }
+  html body #main-container #profile .profile-container .profile-text-container #profile-text {
+    font-size: 5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0 15px;
+  }
+  html body #main-container #profile .profile-container .profile-text-container .pushable:active .front {
+    transform: translateY(-2px);
+  }
+  html body #main-container #profile .profile-container .profile-photo {
+    width: 75dvw;
+  }
+  html body #main-container #about {
+    height: 100dvh;
+  }
+}
+@media screen and (max-width: 428px) and (max-width: 360px) {
+  html body #main-container #about {
+    height: 1100px;
+  }
+}
+@media screen and (max-width: 428px) {
+  html body #main-container #about .about-title {
+    margin: 32px 0;
+    font-size: 6rem;
+    text-align: center;
+  }
+  html body #main-container #about .about-container {
+    display: flex;
+  }
+  html body #main-container #about .about-container #about-image-area {
+    display: none;
+  }
+  html body #main-container #about .about-container #about-image-area > img {
+    display: none;
+  }
+  html body #main-container #about .about-container #about-cards-container {
+    gap: 20px;
+  }
+  html body #main-container #about .about-container #about-cards-container .about-card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  html body #main-container #about .about-container #about-cards-container .about-card .about-card-image {
+    padding: 0 0 0 15px;
+    width: 120px;
+  }
+  html body #main-container #about .about-container #about-cards-container .about-card .text-card-container {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-title {
+    margin: 0;
+    font-size: 3rem;
+  }
+  html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-text {
+    font-size: 3rem;
+  }
+  html body #main-container #about .about-container #about-cards-container .card-0 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  html body #main-container #about .about-container #about-cards-container .card-1 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  html body #main-container #about .about-container #about-cards-container .card-2 {
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  html body .footer-container {
+    margin: 0;
+  }
+  html body .footer-container #contact-title {
+    font-size: 5rem;
+  }
+  html body .footer-container #contact-year {
+    color: white;
+    font-size: 2.5rem;
+  }
+  html body .footer-container .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+  }
+  html body .footer-container .contact-links div {
+    padding: 20px;
+  }
+  html body .footer-container .contact-links div .contact-icon {
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=mobile-style.css.map */

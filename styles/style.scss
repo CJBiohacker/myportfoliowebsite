@@ -26,6 +26,10 @@ html {
       justify-content: space-between;
       align-items: center;
       margin: 0 10%;
+      
+      #nav-active-btn {
+        display: none;
+      }
 
       > a {
         text-decoration: none;
@@ -65,7 +69,7 @@ html {
           display: grid;
           grid-template-columns: 65% 1fr;
 
-          .profile-text {
+          .profile-text-container {
             display: flex;
             flex-direction: column;
             align-items: self-start;
@@ -286,13 +290,6 @@ html {
 
 /* Mobile screens (412px and up) */
 @media screen and (min-width: 429px) and (max-width: 809px) {
-  html {
-    font-size: 6px;
-  }
-}
-
-/* Mobile screens (up to 411px) */
-@media screen and (max-width: 428px) {
   html {
     font-size: 6px;
   }

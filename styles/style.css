@@ -24,6 +24,9 @@ html body #nav-header {
   align-items: center;
   margin: 0 10%;
 }
+html body #nav-header #nav-active-btn {
+  display: none;
+}
 html body #nav-header > a {
   text-decoration: none;
   color: white;
@@ -56,7 +59,7 @@ html body #main-container #profile .profile-container {
   display: grid;
   grid-template-columns: 65% 1fr;
 }
-html body #main-container #profile .profile-container .profile-text {
+html body #main-container #profile .profile-container .profile-text-container {
   display: flex;
   flex-direction: column;
   align-items: self-start;
@@ -64,16 +67,16 @@ html body #main-container #profile .profile-container .profile-text {
   font-weight: 500;
   font-size: 2.5rem;
 }
-html body #main-container #profile .profile-container .profile-text #profile-title {
+html body #main-container #profile .profile-container .profile-text-container #profile-title {
   font-size: 5rem;
   margin: 0;
 }
-html body #main-container #profile .profile-container .profile-text #profile-text {
+html body #main-container #profile .profile-container .profile-text-container #profile-text {
   font-size: 2.5rem;
   margin: 0 50px 0 0;
   word-break: keep-all;
 }
-html body #main-container #profile .profile-container .profile-text .pushable {
+html body #main-container #profile .profile-container .profile-text-container .pushable {
   background: hsl(300, 65%, 38.43%);
   border-radius: 20px;
   border: none;
@@ -81,7 +84,7 @@ html body #main-container #profile .profile-container .profile-text .pushable {
   outline-offset: 4px;
   cursor: pointer;
 }
-html body #main-container #profile .profile-container .profile-text .front {
+html body #main-container #profile .profile-container .profile-text-container .front {
   background: #ca2bb5;
   color: white;
   display: block;
@@ -90,7 +93,7 @@ html body #main-container #profile .profile-container .profile-text .front {
   font-size: 2.5rem;
   transform: translateY(-6px);
 }
-html body #main-container #profile .profile-container .profile-text .pushable:active .front {
+html body #main-container #profile .profile-container .profile-text-container .pushable:active .front {
   transform: translateY(-2px);
 }
 html body #main-container #profile .profile-container .profile-photo {
@@ -233,12 +236,6 @@ html body .footer-container .contact-links div .contact-icon {
 }
 /* Mobile screens (412px and up) */
 @media screen and (min-width: 429px) and (max-width: 809px) {
-  html {
-    font-size: 6px;
-  }
-}
-/* Mobile screens (up to 411px) */
-@media screen and (max-width: 428px) {
   html {
     font-size: 6px;
   }
