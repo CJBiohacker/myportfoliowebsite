@@ -1,7 +1,6 @@
 const getElementFromId = (id) => document.getElementById(id);
 const getElementFromClass = (className) => document.querySelector(className);
-const getAllElementsFromClass = (className) =>
-  document.querySelectorAll(className);
+const getAllElementsFromClass = (className) => document.querySelectorAll(className);
 const createElement = (htmlTag) => document.createElement(htmlTag);
 const scrollToElement = (id) => {
   const element = getElementFromId(id);
@@ -49,9 +48,10 @@ const contactYear = getElementFromId("contact-year");
 const centerLink = getElementFromId("center-link");
 const cardContainer = getElementFromId("about-cards-container");
 const contactBtn = getElementFromId("contact-button");
+const centerLinks = getAllElementsFromClass(".center-link");
 const navMenu = getElementFromId("nav-menu");
 const navActiveBtn = getElementFromId("nav-active-btn");
-const navLink = getAllElementsFromClass(".center-link");
+const navLinks = getAllElementsFromClass(".center-link");
 
 const currentYear = new Date().getFullYear();
 
@@ -95,7 +95,7 @@ contactBtn.onclick = () => {
     newWindow.focus();
   }
 };
-document.querySelectorAll(".center-link").forEach((link) => {
+centerLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     const targetId = e.currentTarget.getAttribute("href").substring(1);
     scrollToElement(targetId);
@@ -115,6 +115,6 @@ navActiveBtn.onclick = () => {
   isClicked = !isClicked;
 };
 
-navLink.forEach((link) => {
+navLinks.forEach((link) => {
   link.addEventListener("click", hideNavMenu);
 });
