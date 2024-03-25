@@ -77,7 +77,6 @@ const aboutCardClass = getAllElementsFromClass(".about-card");
 
 for (let i = 0; i < 3; i++) {
   aboutCardClass[i].childNodes[0].src = aboutCardInfo[i].image;
-  console.log("🚀 ~ current image:", aboutCardClass[i].childNodes[0].src = aboutCardInfo[i].image)
   aboutCardClass[i].childNodes[1].childNodes[0].innerText =
     aboutCardInfo[i].title;
   aboutCardClass[i].childNodes[1].childNodes[1].innerText =
