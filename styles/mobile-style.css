@@ -71,6 +71,7 @@
   }
   html body #main-container #about {
     height: 100dvh;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 428px) and (max-width: 360px) {
