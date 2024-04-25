@@ -234,11 +234,5 @@ html body .footer-container .contact-links div .contact-icon {
     font-size: 8px;
   }
 }
-/* Mobile screens (412px and up) */
-@media screen and (min-width: 429px) and (max-width: 809px) {
-  html {
-    font-size: 6px;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

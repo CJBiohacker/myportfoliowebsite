@@ -1,4 +1,10 @@
-/* Mobile screens (up to 428px) */
+/* Mobile Extra large screens (429px and up) */
+@media screen and (min-width: 429px) and (max-width: 809px) {
+  html {
+    font-size: 6px;
+  }
+}
+/* Mobile Large screens (up to 428px) */
 @media screen and (max-width: 428px) {
   html {
     font-size: 6px;
@@ -150,5 +156,12 @@
     color: white;
   }
 }
+/* Mobile Medium screens (378px and up)  */
+@media (min-width: 378px) and (max-width: 428px) {
+  html {
+    font-size: 5px;
+  }
+}
+/* Mobile small screens (up to 378px)  */
 
 /*# sourceMappingURL=mobile-style.css.map */
