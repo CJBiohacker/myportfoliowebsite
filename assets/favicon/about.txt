@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Nabla
+- Font Author: Copyright 2022 The Nabla Project Authors (https://github.com/justvanrossum/nabla)
+- Font Source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRNRBUFFR_198.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
