@@ -49,7 +49,6 @@ html body #main-container {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
   margin: 80px 10dvw;
@@ -106,8 +105,10 @@ html body #main-container #profile .profile-container .profile-photo {
 html body #main-container #profile .profile-container .profile-photo > img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
 }
 html body #main-container #about {
@@ -178,6 +179,68 @@ html body #main-container #about .about-container #about-cards-container .card-2
   grid-row-start: 3;
   grid-row-end: 3;
 }
+html body #main-container #experience {
+  width: 100%;
+}
+html body #main-container #experience .experience-title {
+  font-size: 4rem;
+  margin: 50px 0 50px 8%;
+}
+html body #main-container #experience .experience-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+html body #main-container #experience .experience-container .experience-skills-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+html body #main-container #experience .experience-container .experience-skills-container .skill-card {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+html body #main-container #experience .experience-container .experience-skills-container .skill-card div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body #main-container #experience .experience-container .experience-skills-container .skill-card div .skill-image {
+  width: 64px;
+  height: 64px;
+}
+html body #main-container #experience .experience-container .experience-skills-container .skill-card .skill-name {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+html body #main-container #experience .experience-container .experience-jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+html body #main-container #experience .experience-container .experience-jobs-container .job-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+html body #main-container #experience .experience-container .experience-jobs-container .job-card .img-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+html body #main-container #experience .experience-container .experience-jobs-container .job-card .img-container > img {
+  width: 50px;
+}
 html body .footer-container {
   grid-area: footer;
   display: flex;
@@ -233,6 +296,4 @@ html body .footer-container .contact-links div .contact-icon {
   html {
     font-size: 8px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

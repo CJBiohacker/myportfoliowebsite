@@ -26,7 +26,7 @@ html {
       justify-content: space-between;
       align-items: center;
       margin: 0 10%;
-      
+
       #nav-active-btn {
         display: none;
       }
@@ -58,7 +58,6 @@ html {
       grid-area: main;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       height: 100%;
       margin: 80px 10dvw;
@@ -166,7 +165,7 @@ html {
             grid-row-end: 4;
             display: grid;
             grid-template-columns: 1fr 2fr;
-            grid-template-rows: 1fr 1fr 1fr;            
+            grid-template-rows: 1fr 1fr 1fr;
 
             .about-card {
               grid-column-start: 1;
@@ -177,41 +176,131 @@ html {
               align-items: center;
               width: 100%;
 
-              .about-card-image{
+              .about-card-image {
                 width: 120px;
               }
+
               .text-card-container {
                 font-size: 1.5em;
                 display: flex;
                 flex-direction: column;
                 padding: 0 50px 0 15px;
 
-                .about-card-title{
+                .about-card-title {
                   margin: 0;
                 }
-                .about-card-text{
-    
+
+                .about-card-text {
                 }
               }
             }
-            
+
             .card-0 {
               grid-row-start: 1;
               grid-row-end: 1;
             }
+
             .card-1 {
               grid-row-start: 2;
               grid-row-end: 2;
-
             }
+
             .card-2 {
               grid-row-start: 3;
               grid-row-end: 3;
-
             }
-
           }
         }
+      }
+
+      #experience {
+        width: 100%;
+
+        .experience-title {
+          font-size: 4rem;
+          margin: 50px 0 50px 8%;
+        }
+
+        .experience-container {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 50px;
+
+          .experience-skills-container {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 30px;
+
+            .skill-card {
+              width: 120px;
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+
+              div {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .skill-image {
+                  width: 64px;
+                  height: 64px;
+                }
+              }
+
+              .skill-name {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+              }
+            }
+          }
+
+          .experience-jobs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+
+            .job-card {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+
+              .img-container {
+                display: flex;
+                justify-content: center;
+                align-self: center;
+
+                > img {
+                  width: 50px;
+                }
+              }
+
+              .text-container {
+                > h3 {
+                }
+
+                > p {
+                }
+
+                > ul {
+                  li {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #projects {
       }
     }
 
