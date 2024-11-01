@@ -13,19 +13,18 @@
     body {
       #nav-header {
         > a {
-
           p {
             font-size: 5rem;
           }
         }
 
         #nav-active-btn {
-            display: block;
-            background-color: rgba($color: white, $alpha: 0);
-            border-color: rgba($color: black, $alpha: 0);
-            border-radius: 3px;
-            color: white;
-            padding: 5px 8px;
+          display: block;
+          background-color: rgba($color: white, $alpha: 0);
+          border-color: rgba($color: black, $alpha: 0);
+          border-radius: 3px;
+          color: white;
+          padding: 5px 8px;
         }
 
         .nav-menu {
@@ -39,8 +38,7 @@
           width: 220px;
           padding: 15px;
           border-radius: 8px;
-          background-color: rgba($color: #966FCC, $alpha: 0.8);
-          
+          background-color: rgba($color: #966fcc, $alpha: 0.8);
 
           > a {
             text-decoration: none;
@@ -99,12 +97,12 @@
         }
 
         #about {
-            height: 100dvh;
-            border-radius: 0;
+          height: 100dvh;
+          border-radius: 0;
 
-            @media screen and (max-width: 360px) {
-                height: 1100px;
-              }
+          @media screen and (max-width: 360px) {
+            height: 1100px;
+          }
 
           .about-title {
             margin: 32px 0;
@@ -116,7 +114,7 @@
             display: flex;
 
             #about-image-area {
-                display: none;
+              display: none;
 
               > img {
                 display: none;
@@ -124,7 +122,7 @@
             }
 
             #about-cards-container {
-                gap: 20px;
+              gap: 20px;
 
               .about-card {
                 grid-column-start: 1;
@@ -170,13 +168,63 @@
             }
           }
         }
+
+        #experience {
+          .experience-title {
+            font-size: 6rem;
+            text-align: center;
+          }
+
+          .experience-container {
+            .experience-skills-container {
+              .skill-card {
+                div {
+                  .skill-image {
+                  }
+                }
+
+                .skill-name {
+                }
+              }
+            }
+
+            .experience-jobs-container {
+              justify-content: center;
+
+              .job-card {
+                width: 300px;
+
+                .img-container {
+                  > img {
+                  }
+                }
+
+                .text-container {
+                  > h3 {
+                    font-size: 2.5rem;
+                  }
+
+                  > p {
+                    font-size: 2rem;
+                  }
+
+                  > ul {
+                    li {
+                      font-size: 2.5rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
 
       .footer-container {
         margin: 0;
 
         #contact-title {
-          font-size: 5rem;          
+          font-size: 5rem;
         }
 
         #contact-year {
@@ -211,5 +259,9 @@
 
 /* Mobile small screens (up to 378px)  */
 @media (max-width: 378px) {
-  
+  html {
+    body #main-container #experience .experience-container {
+      margin-bottom: 100px;
+    }
+  }
 }

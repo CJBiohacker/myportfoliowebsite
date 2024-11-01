@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 
   body {
-    background-color: #6e2bcc;
+    background: radial-gradient(circle at center, #6e2bcc, #0a0a0a);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 20dvh 1fr 20dvh;
@@ -59,9 +59,10 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-evenly;
       height: 100%;
       margin: 80px 10dvw;
-      gap: 180px;
+      gap: 20px;
 
       #profile {
         .profile-container {
@@ -88,7 +89,11 @@ html {
             }
 
             .pushable {
-              background: hsl(300deg, 65%, 38.43%);
+              background: radial-gradient(
+                circle at center,
+                hsl(300deg, 65%, 38.43%),
+                #131111
+              );
               border-radius: 20px;
               border: none;
               padding: 0;
@@ -237,13 +242,13 @@ html {
             gap: 30px;
 
             .skill-card {
-              width: 120px;
+              flex-basis: 120px;
               display: flex;
               flex-direction: column;
               text-align: center;
 
               div {
-                background-color: rgba(255, 255, 255, 0.8);
+                background-color: rgba(255, 255, 255, 0.9);
                 border-radius: 50%;
                 height: 100px;
                 display: flex;
@@ -266,12 +271,16 @@ html {
           .experience-jobs-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 20px;
 
             .job-card {
               display: flex;
-              align-items: flex-start;
+              align-items: center;
               gap: 10px;
+              padding: 10px 20px;
+              border-radius: 12px;
+              width: 450px;
+              background: radial-gradient(circle at center, #19376d, #0a0a0a);
 
               .img-container {
                 display: flex;
@@ -280,18 +289,26 @@ html {
 
                 > img {
                   width: 50px;
+                  height: 50px;
                 }
               }
 
               .text-container {
                 > h3 {
+                  font-size: 2rem;
+                  margin: auto auto 0 auto;
                 }
 
                 > p {
+                  margin: 0;
+                  font-size: 1.2rem;
                 }
 
                 > ul {
+                  padding: 0 0 0 30px;
+
                   li {
+                    font-size: 1.5rem;
                   }
                 }
               }
@@ -312,6 +329,7 @@ html {
       justify-content: center;
       gap: 20px;
       margin: 0px 200px;
+      padding: 10px 0;
 
       #contact-title {
         font-size: 2rem;
@@ -347,6 +365,15 @@ html {
 
 /* Extra large screens (1920px and up) */
 @media screen and (min-width: 1920px) and (max-width: 2559px) {
+  html {
+    body
+      #main-container
+      #experience
+      .experience-container
+      .experience-jobs-container {
+      gap: 60px;
+    }
+  }
 }
 
 /* Large screens (1440px and up) */
@@ -374,5 +401,14 @@ html {
 @media screen and (min-width: 810px) and (max-width: 1279px) {
   html {
     font-size: 8px;
+
+    body
+      #main-container
+      #experience
+      .experience-container
+      .experience-jobs-container
+      .job-card {
+      width: 270px;
+    }
   }
 }

@@ -56,8 +56,12 @@ const experienceSkillsInfo = [
     image: "./images/css3-logo.svg",
   },
   {
-    name: "javascript",
+    name: "js",
     image: "./images/javascript-logo.svg",
+  },
+  {
+    name: "ts",
+    image: "./images/typescript-logo.svg",
   },
   {
     name: "vue",
@@ -84,11 +88,11 @@ const experienceSkillsInfo = [
     image: "./images/koa-logo.svg",
   },
   {
-    name: "postgresql",
+    name: "postgre",
     image: "./images/postgresql-logo.svg",
   },
   {
-    name: "mongodb",
+    name: "mongo",
     image: "./images/mongodb-logo.svg",
   },
   {
@@ -111,7 +115,7 @@ const experienceSkillsInfo = [
     image: "./images/docker-logo.svg",
   },
   {
-    name: "kubernetes",
+    name: "k8s",
     image: "./images/kubernetes-logo.svg",
   },
   {
@@ -135,9 +139,9 @@ const experienceJobsInfo = [
     date: "Jun 2022 - Jan 2024",
     image: "./images/zoox-smart-data-logo.svg",
     description: {
-      topic_1: `Worked in Zoox Eye project, a huge customer data platform focused in ETL and Big Data.`,
-      topic_2: `Responsive Front End Web Development of pages and components using VueJS`,
-      topic_3: `Robust Back End Web Development of RESTful APIs using NodeJS and KoaJS`,
+      topic_1: `Worked in Zoox Eye project, a CDP based in ETL and Big Data.`,
+      topic_2: `Responsive Front End Web Development with VueJS.`,
+      topic_3: `Back End Web Development of RESTful APIs with NodeJS.`,
     },
   },
   {
@@ -146,8 +150,8 @@ const experienceJobsInfo = [
     date: "Jun 2018 - Aug 2022",
     image: "./images/self-employed-icon.svg",
     description: {
-      topic_1: `Installation and maintenance of electronic circuits and network infrastructure.`,
-      topic_2: `Budget consultation, assembly and maintenance of Computer and Notebook Hardware.`,
+      topic_1: `Installation and maintenance of network infrastructure.`,
+      topic_2: `Budget consultation, assembly and maintenance of PC.`,
       topic_3: `Technical software support for computers and notebooks`,
     },
   },
