@@ -115,12 +115,17 @@
     display: flex;
     flex-direction: column;
     padding: 0 15px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
   }
   html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-title {
     margin: 0;
     font-size: 3rem;
   }
   html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-text {
+    box-sizing: content-box;
+    width: 100%;
     font-size: 3rem;
   }
   html body #main-container #about .about-container #about-cards-container .card-0 {
@@ -181,10 +186,19 @@
   html {
     font-size: 5px;
   }
+  html body #main-container #about {
+    height: auto;
+  }
 }
 /* Mobile small screens (up to 378px)  */
 @media (max-width: 378px) {
   html body #main-container #experience .experience-container {
     margin-bottom: 100px;
+  }
+  html body #main-container #about {
+    height: auto;
+  }
+  html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-text {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=mobile-style.css.map */

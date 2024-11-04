@@ -261,6 +261,14 @@ html body #main-container #experience .experience-container .experience-jobs-con
 html body #main-container #experience .experience-container .experience-jobs-container .job-card .text-container > ul li {
   font-size: 1.5rem;
 }
+html body #main-container #projects {
+  width: 100%;
+  margin-bottom: 200px;
+}
+html body #main-container #projects .projects-title {
+  font-size: 4rem;
+  margin: 50px 0 50px 8%;
+}
 html body .footer-container {
   grid-area: footer;
   display: flex;

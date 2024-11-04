@@ -318,6 +318,18 @@ html {
       }
 
       #projects {
+        width: 100%;
+        margin-bottom: 200px; // Adjust this later
+
+        .projects-title {
+          font-size: 4rem;
+          margin: 50px 0 50px 8%;
+        }
+
+        .projects-container {
+          .projects-cards-container {
+          }
+        }
       }
     }
 
