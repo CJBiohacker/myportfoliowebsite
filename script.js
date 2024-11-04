@@ -5,29 +5,19 @@ const getAllElementsFromClass = (className) =>
 const createElement = (htmlTag) => document.createElement(htmlTag);
 const openNewWindow = (path) =>
   window.open(path, "_blank", "width=420,height=420");
-const scrollToElement = (id) => {
-  const element = getElementFromId(id);
-  const rect = element.getBoundingClientRect();
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-  const offsetX =
-    rect.left + scrollLeft - window.innerWidth / 2 + rect.width / 2;
-  const offsetY =
-    rect.top + scrollTop - window.innerHeight / 2 + rect.height / 2;
-
-  window.scrollTo({
-    top: offsetY,
-    left: offsetX,
-  });
-};
 const hideNavMenu = () => {
   if (window.innerWidth < 429) {
     const container = document.getElementById("nav-menu");
     container.style.display = "none";
   }
 };
+const handleClickOutside = (event) => {
+  if (!navActiveBtn.contains(event.target) && !navMenu.contains(event.target)) {
+    hideNavMenu();
+  }
+};
 
-let isClicked = false;
+let isMenuActive = false;
 const aboutCardInfo = [
   {
     title: `FrontEnd Development`,
@@ -110,7 +100,8 @@ const experienceSkillsInfo = [
   {
     name: "git",
     image: "./images/git-logo.svg",
-  },{
+  },
+  {
     name: "docker",
     image: "./images/docker-logo.svg",
   },
@@ -129,7 +120,7 @@ const experienceSkillsInfo = [
   {
     name: "windows",
     image: "./images/windows-logo.svg",
-  }
+  },
 ];
 
 const experienceJobsInfo = [
@@ -158,16 +149,18 @@ const experienceJobsInfo = [
 ];
 
 const contactYear = getElementFromId("contact-year");
-const centerLink = getElementFromId("center-link");
 const cardContainer = getElementFromId("about-cards-container");
 const contactBtn = getElementFromId("contact-button");
-const centerLinks = getAllElementsFromClass(".center-link");
 const navMenu = getElementFromId("nav-menu");
 const navActiveBtn = getElementFromId("nav-active-btn");
-const navLinks = getAllElementsFromClass(".center-link");
+const navLinks = getAllElementsFromClass(".nav-link");
 const contactEmail = getElementFromId("contact-email");
-const experienceSkillsContainer = getElementFromClass(".experience-skills-container");
-const experienceJobsContainer = getElementFromClass(".experience-jobs-container");
+const experienceSkillsContainer = getElementFromClass(
+  ".experience-skills-container"
+);
+const experienceJobsContainer = getElementFromClass(
+  ".experience-jobs-container"
+);
 
 const currentYear = new Date().getFullYear();
 
@@ -218,35 +211,35 @@ for (let _ of experienceSkillsInfo) {
 }
 
 for (const job of experienceJobsInfo) {
-    const jobCardDiv = createElement("div");
-    const imgContainerDiv = createElement("div");
-    const jobImage = createElement("img");
-    const textContainerDiv = createElement("div");
-    const jobTitle = createElement("h3");
-    const jobDescription = createElement("p");
-    const jobTopicsList = createElement("ul");
-    
-    jobCardDiv.classList.add("job-card");
-    imgContainerDiv.classList.add("img-container");
-    textContainerDiv.classList.add("text-container");
+  const jobCardDiv = createElement("div");
+  const imgContainerDiv = createElement("div");
+  const jobImage = createElement("img");
+  const textContainerDiv = createElement("div");
+  const jobTitle = createElement("h3");
+  const jobDescription = createElement("p");
+  const jobTopicsList = createElement("ul");
 
-    experienceJobsContainer.appendChild(jobCardDiv);
-    jobCardDiv.appendChild(imgContainerDiv);
-    jobCardDiv.appendChild(textContainerDiv);
-    imgContainerDiv.appendChild(jobImage);
-    textContainerDiv.appendChild(jobTitle);
-    textContainerDiv.appendChild(jobDescription);
-    textContainerDiv.appendChild(jobTopicsList);
+  jobCardDiv.classList.add("job-card");
+  imgContainerDiv.classList.add("img-container");
+  textContainerDiv.classList.add("text-container");
 
-    jobImage.src = job.image;
-    jobTitle.innerText = job.position;
-    jobDescription.innerText = `${job.company} - ${job.date}`;
+  experienceJobsContainer.appendChild(jobCardDiv);
+  jobCardDiv.appendChild(imgContainerDiv);
+  jobCardDiv.appendChild(textContainerDiv);
+  imgContainerDiv.appendChild(jobImage);
+  textContainerDiv.appendChild(jobTitle);
+  textContainerDiv.appendChild(jobDescription);
+  textContainerDiv.appendChild(jobTopicsList);
 
-    for (const topic in job.description) {
-      const listItem = createElement("li");
-      listItem.innerText = job.description[topic];
-      jobTopicsList.appendChild(listItem);
-    }
+  jobImage.src = job.image;
+  jobTitle.innerText = job.position;
+  jobDescription.innerText = `${job.company} - ${job.date}`;
+
+  for (const topic in job.description) {
+    const listItem = createElement("li");
+    listItem.innerText = job.description[topic];
+    jobTopicsList.appendChild(listItem);
+  }
 }
 
 const skillImagesList = getAllElementsFromClass(".skill-image");
@@ -267,16 +260,9 @@ contactBtn.onclick = () => {
     newWindow.focus();
   }
 };
-centerLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const targetId = e.currentTarget.getAttribute("href").substring(1);
-    scrollToElement(targetId);
-    e.preventDefault();
-  });
-});
 
 navActiveBtn.onclick = () => {
-  if (!isClicked) {
+  if (!isMenuActive) {
     navActiveBtn.style.borderColor = "white";
     navMenu.style.display = "flex";
   } else {
@@ -284,7 +270,11 @@ navActiveBtn.onclick = () => {
     navMenu.style.display = "none";
   }
 
-  isClicked = !isClicked;
+  isMenuActive = !isMenuActive;
+};
+
+navActiveBtn.onblur = () => {
+  isMenuActive = false;
 };
 
 navLinks.forEach((link) => {
@@ -295,3 +285,5 @@ contactEmail.addEventListener("click", (event) => {
   openNewWindow("mailto:cj.moyses@gmail.com");
   event.preventDefault();
 });
+
+document.addEventListener("click", handleClickOutside);
