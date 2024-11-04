@@ -159,25 +159,30 @@
   html body #main-container #experience .experience-container .experience-jobs-container .job-card .text-container > ul li {
     font-size: 2.5rem;
   }
+  html body #main-container #projects .projects-title {
+    margin: 32px 0;
+    font-size: 6rem;
+    text-align: center;
+  }
   html body .footer-container {
     margin: 0;
   }
-  html body .footer-container #contact-title {
+  html body .footer-container #footer-wrapper #contact-title {
     font-size: 5rem;
   }
-  html body .footer-container #contact-year {
+  html body .footer-container #footer-wrapper #contact-year {
     color: white;
     font-size: 2.5rem;
   }
-  html body .footer-container .contact-links {
+  html body .footer-container #footer-wrapper .contact-links {
     display: flex;
     justify-content: center;
     gap: 36px;
   }
-  html body .footer-container .contact-links div {
+  html body .footer-container #footer-wrapper .contact-links div {
     padding: 20px;
   }
-  html body .footer-container .contact-links div .contact-icon {
+  html body .footer-container #footer-wrapper .contact-links div .contact-icon {
     color: white;
   }
 }

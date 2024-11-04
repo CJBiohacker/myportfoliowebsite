@@ -224,30 +224,45 @@
             }
           }
         }
+
+        #projects {
+          .projects-title {
+            margin: 32px 0;
+            font-size: 6rem;
+            text-align: center;
+          }
+
+          .projects-container {
+            .projects-cards-container {
+            }
+          }
+        }
       }
 
       .footer-container {
         margin: 0;
 
-        #contact-title {
-          font-size: 5rem;
-        }
+        #footer-wrapper {
+          #contact-title {
+            font-size: 5rem;
+          }
 
-        #contact-year {
-          color: white;
-          font-size: 2.5rem;
-        }
+          #contact-year {
+            color: white;
+            font-size: 2.5rem;
+          }
 
-        .contact-links {
-          display: flex;
-          justify-content: center;
-          gap: 36px;
+          .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 36px;
 
-          div {
-            padding: 20px;
+            div {
+              padding: 20px;
 
-            .contact-icon {
-              color: white;
+              .contact-icon {
+                color: white;
+              }
             }
           }
         }

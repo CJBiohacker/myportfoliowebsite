@@ -220,6 +220,7 @@ html {
 
       #experience {
         width: 100%;
+        margin-bottom: 50px;
 
         .experience-title {
           font-size: 4rem;
@@ -248,7 +249,7 @@ html {
               text-align: center;
 
               div {
-                background-color: rgba(255, 255, 255, 0.9);
+                background-color: rgba(255, 255, 255, 0.2);
                 border-radius: 50%;
                 height: 100px;
                 display: flex;
@@ -335,35 +336,43 @@ html {
 
     .footer-container {
       grid-area: footer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      margin: 0px 200px;
-      padding: 10px 0;
 
-      #contact-title {
-        font-size: 2rem;
-        margin-bottom: 12px;
-        color: white;
-      }
-
-      #contact-year {
-        color: white;
-        font-size: 1.5rem;
-      }
-
-      .contact-links {
+      #footer-wrapper {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        gap: 36px;
+        gap: 20px;
+        padding: 50px 0 0 0;
+        background: radial-gradient(circle at center, #21074366, #0a0a0a66);
 
-        div {
-          padding: 20px;
+        #contact-title {
+          font-size: 2.7rem;
+          margin-bottom: 12px;
+          color: white;
+        }
 
-          .contact-icon {
-            color: white;
+        #contact-year {
+          color: white;
+          font-size: 1.5rem;
+        }
+
+        #contact-me {
+          color: white;
+          font-size: 3rem;
+        }
+
+        .contact-links {
+          display: flex;
+          justify-content: center;
+          gap: 36px;
+
+          div {
+            padding: 20px;
+
+            .contact-icon {
+              color: white;
+            }
           }
         }
       }

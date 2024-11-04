@@ -182,6 +182,7 @@ html body #main-container #about .about-container #about-cards-container .card-2
 }
 html body #main-container #experience {
   width: 100%;
+  margin-bottom: 50px;
 }
 html body #main-container #experience .experience-title {
   font-size: 4rem;
@@ -209,7 +210,7 @@ html body #main-container #experience .experience-container .experience-skills-c
   text-align: center;
 }
 html body #main-container #experience .experience-container .experience-skills-container .skill-card div {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   height: 100px;
   display: flex;
@@ -271,32 +272,38 @@ html body #main-container #projects .projects-title {
 }
 html body .footer-container {
   grid-area: footer;
+}
+html body .footer-container #footer-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 0px 200px;
-  padding: 10px 0;
+  padding: 50px 0 0 0;
+  background: radial-gradient(circle at center, rgba(33, 7, 67, 0.4), rgba(10, 10, 10, 0.4));
 }
-html body .footer-container #contact-title {
-  font-size: 2rem;
+html body .footer-container #footer-wrapper #contact-title {
+  font-size: 2.7rem;
   margin-bottom: 12px;
   color: white;
 }
-html body .footer-container #contact-year {
+html body .footer-container #footer-wrapper #contact-year {
   color: white;
   font-size: 1.5rem;
 }
-html body .footer-container .contact-links {
+html body .footer-container #footer-wrapper #contact-me {
+  color: white;
+  font-size: 3rem;
+}
+html body .footer-container #footer-wrapper .contact-links {
   display: flex;
   justify-content: center;
   gap: 36px;
 }
-html body .footer-container .contact-links div {
+html body .footer-container #footer-wrapper .contact-links div {
   padding: 20px;
 }
-html body .footer-container .contact-links div .contact-icon {
+html body .footer-container #footer-wrapper .contact-links div .contact-icon {
   color: white;
 }
 
