@@ -274,6 +274,7 @@ html body #main-container #projects .projects-container .project-card .project-i
   align-self: center;
   padding: 10px;
   border-radius: 8px;
+  width: 100%;
 }
 html body #main-container #projects .projects-container .project-card .project-text-container {
   display: flex;
@@ -348,8 +349,9 @@ html .front {
   display: block;
   padding: 12px 24px;
   border-radius: 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transform: translateY(-6px);
+  text-decoration: none;
 }
 html .pushable:active .front {
   transform: translateY(-2px);

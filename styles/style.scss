@@ -329,6 +329,7 @@ html {
               align-self: center;
               padding: 10px;
               border-radius: 8px;
+              width: 100%;
             }
             .project-text-container {
               display: flex;
@@ -426,8 +427,9 @@ html {
     display: block;
     padding: 12px 24px;
     border-radius: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transform: translateY(-6px);
+    text-decoration: none;
   }
 
   .pushable:active .front {

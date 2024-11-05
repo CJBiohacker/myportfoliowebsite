@@ -150,20 +150,21 @@ const experienceJobsInfo = [
 
 const projectsInfo = [
   {
-    title: "Project 1",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallisLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallisLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
+    title: "Mini Rutter Shopify Rest API",
+    image: "./images/mini-rutter-icon.svg",
+    description: `A BackEnd service responsible to fetch the products and orders from simulated Rutter shopify platform and save it in a database of my choice (NoSQL Firetore Database).`,
+    technologies: ["NodeJS", "TypeScript", "Firebase"],
+    repository: "https://github.com/CJBiohacker/Carlos-Junior-Minirutter",
+    hosted: "N/A",
   },
   {
-    title: "Project 2",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
+    title: "UI-Versity",
+    image: "./images/ui-versidade-icon.svg",
+    description: `A Vue.js application that serves as a CRUD system for managing users and resources. It leverages technologies like Vuetify for UI components, Pinia for state management, and Vite for rapid development.
+Data fetched from a fake API (Reqres) is displayed it in a user-friendly interface. It offers features like user registration, login, and resource management. `,
+    technologies: ["Javascript", "VueJS", "Pinia"],
+    repository: "https://github.com/CJBiohacker/teste-tecnico-front",
+    hosted: "N/A",
   },
   {
     title: "Project 3",
@@ -311,59 +312,63 @@ for (let i = 0; i < experienceSkillsInfo.length; i++) {
 }
 
 for (const project of projectsInfo) {
-  const projectCard = document.createElement('div');
-  const projectImg = document.createElement('img');
-  const projectTextDiv = document.createElement('div');
-  const projectName = document.createElement('h1');
-  const projectDescription = document.createElement('p');
-  const projectTechnologiesDiv = document.createElement('div');
-  const projectTech1 = document.createElement('p');
-  const projectTech2 = document.createElement('p');
-  const projectTech3 = document.createElement('p');
-  const projectButtonDiv = document.createElement('div');
-  const projectRepositoryBtn = document.createElement('button');
-  const projectHostedBtn = document.createElement('button');
-  const projectRepoBtnSpan = document.createElement('span');
-  const projectHostedBtnSpan = document.createElement('span');
+  const projectCard = document.createElement("div");
+  const projectImg = document.createElement("img");
+  const projectTextDiv = document.createElement("div");
+  const projectName = document.createElement("h1");
+  const projectDescription = document.createElement("p");
+  const projectTechnologiesDiv = document.createElement("div");
+  const projectTech1 = document.createElement("p");
+  const projectTech2 = document.createElement("p");
+  const projectTech3 = document.createElement("p");
+  const projectButtonDiv = document.createElement("div");
+  const projectRepoBtn = document.createElement("button");
+  const projectRepoBtnLink = document.createElement("a");
 
-  projectCard.className = 'project-card';
-  projectImg.className = 'project-img';
-  projectTextDiv.className = 'project-text-container';
-  projectTechnologiesDiv.className = 'project-tech-container';
-  projectButtonDiv.className = 'project-btn-container';
-  projectRepositoryBtn.className = 'pushable';
-  projectHostedBtn.className = 'pushable';
-  projectRepoBtnSpan.className = 'front';
-  projectHostedBtnSpan.className = 'front';
+  projectCard.className = "project-card";
+  projectImg.className = "project-img";
+  projectTextDiv.className = "project-text-container";
+  projectTechnologiesDiv.className = "project-tech-container";
+  projectButtonDiv.className = "project-btn-container";
+  projectRepoBtn.className = "pushable";
+  projectRepoBtnLink.className = "front";
+  projectRepoBtnLink.target = "_blank";
 
   projectImg.src = project.image;
   projectImg.alt = project.title;
   projectName.innerText = project.title;
   projectDescription.innerText = project.description;
-  projectTech1.innerText = project.technologies[0];  
-  projectTech2.innerText = project.technologies[1];  
+  projectTech1.innerText = project.technologies[0];
+  projectTech2.innerText = project.technologies[1];
   projectTech3.innerText = project.technologies[2];
-  projectRepoBtnSpan.innerText = 'Source Code';
-  projectHostedBtnSpan.innerText = 'Hosted Page';
+  projectRepoBtnLink.innerText = "Source Code";
+  projectRepoBtnLink.href = project.repository;
 
   projectTextDiv.appendChild(projectName);
   projectTextDiv.appendChild(projectDescription);
-  projectButtonDiv.appendChild(projectRepositoryBtn);
-  projectButtonDiv.appendChild(projectHostedBtn);
+  projectButtonDiv.appendChild(projectRepoBtn);
   projectTechnologiesDiv.appendChild(projectTech1);
   projectTechnologiesDiv.appendChild(projectTech2);
   projectTechnologiesDiv.appendChild(projectTech3);
-  projectButtonDiv.appendChild(projectRepositoryBtn);
-  projectButtonDiv.appendChild(projectHostedBtn);
-  projectRepositoryBtn.appendChild(projectRepoBtnSpan);
-  projectHostedBtn.appendChild(projectHostedBtnSpan);
+  projectRepoBtn.appendChild(projectRepoBtnLink);
   projectCard.appendChild(projectImg);
   projectCard.appendChild(projectTextDiv);
   projectCard.appendChild(projectTechnologiesDiv);
   projectCard.appendChild(projectButtonDiv);
 
-  projectsContainer.appendChild(projectCard);
+  if (project.hosted !== "N/A") {
+    const projectHostedBtn = document.createElement("button");
+    const projectHostedBtnLink = document.createElement("a");
+    projectHostedBtn.className = "pushable";
+    projectHostedBtnLink.className = "front";
+    projectHostedBtnLink.innerText = "Hosted Page";
+    projectHostedBtnLink.href = project.hosted;
+    projectHostedBtnLink.target = "_blank";
+    projectHostedBtn.appendChild(projectHostedBtnLink);
+    projectButtonDiv.appendChild(projectHostedBtn);
+  }
 
+  projectsContainer.appendChild(projectCard);
 }
 
 contactBtn.onclick = () => {
