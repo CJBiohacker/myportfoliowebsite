@@ -148,6 +148,65 @@ const experienceJobsInfo = [
   },
 ];
 
+const projectsInfo = [
+  {
+    title: "Project 1",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallisLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallisLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+  {
+    title: "Project 2",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+  {
+    title: "Project 3",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+  {
+    title: "Project 4",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+  {
+    title: "Project 5",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+  {
+    title: "Project 6",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+  {
+    title: "Project 7",
+    image: "./images/googlecloud-logo.svg",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    repository: "https://github.com",
+    hosted: "https://github.com",
+  },
+];
+
 const contactYear = getElementFromId("contact-year");
 const cardContainer = getElementFromId("about-cards-container");
 const contactBtn = getElementFromId("contact-button");
@@ -161,6 +220,7 @@ const experienceSkillsContainer = getElementFromClass(
 const experienceJobsContainer = getElementFromClass(
   ".experience-jobs-container"
 );
+const projectsContainer = getElementFromClass(".projects-container");
 
 const currentYear = new Date().getFullYear();
 
@@ -248,6 +308,62 @@ const skillNamesList = getAllElementsFromClass(".skill-name");
 for (let i = 0; i < experienceSkillsInfo.length; i++) {
   skillImagesList[i].src = experienceSkillsInfo[i].image;
   skillNamesList[i].innerText = experienceSkillsInfo[i].name;
+}
+
+for (const project of projectsInfo) {
+  const projectCard = document.createElement('div');
+  const projectImg = document.createElement('img');
+  const projectTextDiv = document.createElement('div');
+  const projectName = document.createElement('h1');
+  const projectDescription = document.createElement('p');
+  const projectTechnologiesDiv = document.createElement('div');
+  const projectTech1 = document.createElement('p');
+  const projectTech2 = document.createElement('p');
+  const projectTech3 = document.createElement('p');
+  const projectButtonDiv = document.createElement('div');
+  const projectRepositoryBtn = document.createElement('button');
+  const projectHostedBtn = document.createElement('button');
+  const projectRepoBtnSpan = document.createElement('span');
+  const projectHostedBtnSpan = document.createElement('span');
+
+  projectCard.className = 'project-card';
+  projectImg.className = 'project-img';
+  projectTextDiv.className = 'project-text-container';
+  projectTechnologiesDiv.className = 'project-tech-container';
+  projectButtonDiv.className = 'project-btn-container';
+  projectRepositoryBtn.className = 'pushable';
+  projectHostedBtn.className = 'pushable';
+  projectRepoBtnSpan.className = 'front';
+  projectHostedBtnSpan.className = 'front';
+
+  projectImg.src = project.image;
+  projectImg.alt = project.title;
+  projectName.innerText = project.title;
+  projectDescription.innerText = project.description;
+  projectTech1.innerText = project.technologies[0];  
+  projectTech2.innerText = project.technologies[1];  
+  projectTech3.innerText = project.technologies[2];
+  projectRepoBtnSpan.innerText = 'Source Code';
+  projectHostedBtnSpan.innerText = 'Hosted Page';
+
+  projectTextDiv.appendChild(projectName);
+  projectTextDiv.appendChild(projectDescription);
+  projectButtonDiv.appendChild(projectRepositoryBtn);
+  projectButtonDiv.appendChild(projectHostedBtn);
+  projectTechnologiesDiv.appendChild(projectTech1);
+  projectTechnologiesDiv.appendChild(projectTech2);
+  projectTechnologiesDiv.appendChild(projectTech3);
+  projectButtonDiv.appendChild(projectRepositoryBtn);
+  projectButtonDiv.appendChild(projectHostedBtn);
+  projectRepositoryBtn.appendChild(projectRepoBtnSpan);
+  projectHostedBtn.appendChild(projectHostedBtnSpan);
+  projectCard.appendChild(projectImg);
+  projectCard.appendChild(projectTextDiv);
+  projectCard.appendChild(projectTechnologiesDiv);
+  projectCard.appendChild(projectButtonDiv);
+
+  projectsContainer.appendChild(projectCard);
+
 }
 
 contactBtn.onclick = () => {

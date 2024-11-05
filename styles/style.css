@@ -76,25 +76,9 @@ html body #main-container #profile .profile-container .profile-text-container #p
   margin: 0 50px 0 0;
   word-break: keep-all;
 }
-html body #main-container #profile .profile-container .profile-text-container .pushable {
-  background: radial-gradient(circle at center, hsl(300, 65%, 38.43%), #131111);
-  border-radius: 20px;
-  border: none;
-  padding: 0;
-  outline-offset: 4px;
-  cursor: pointer;
-}
-html body #main-container #profile .profile-container .profile-text-container .front {
-  background: #ca2bb5;
-  color: white;
-  display: block;
-  padding: 12px 42px;
-  border-radius: 20px;
+html body #main-container #profile .profile-container .profile-text-container > div #contact-button > span {
   font-size: 2.5rem;
-  transform: translateY(-6px);
-}
-html body #main-container #profile .profile-container .profile-text-container .pushable:active .front {
-  transform: translateY(-2px);
+  border-radius: 25px;
 }
 html body #main-container #profile .profile-container .profile-photo {
   display: flex;
@@ -270,6 +254,50 @@ html body #main-container #projects .projects-title {
   font-size: 4rem;
   margin: 50px 0 50px 8%;
 }
+html body #main-container #projects .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+html body #main-container #projects .projects-container .project-card {
+  background: radial-gradient(circle at center, #19376d, #0a0a0a);
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 350px;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 10px;
+}
+html body #main-container #projects .projects-container .project-card .project-img {
+  background: radial-gradient(circle at center, #19376d, #0a0a0a);
+  align-self: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+html body #main-container #projects .projects-container .project-card .project-text-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  height: 280px;
+}
+html body #main-container #projects .projects-container .project-card .project-tech-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.8rem;
+}
+html body #main-container #projects .projects-container .project-card .project-tech-container > p {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  padding: 10px;
+}
+html body #main-container #projects .projects-container .project-card .project-btn-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+}
 html body .footer-container {
   grid-area: footer;
 }
@@ -306,6 +334,26 @@ html body .footer-container #footer-wrapper .contact-links div {
 html body .footer-container #footer-wrapper .contact-links div .contact-icon {
   color: white;
 }
+html .pushable {
+  background: radial-gradient(circle at center, hsl(300, 65%, 38.43%), #131111);
+  border-radius: 20px;
+  border: none;
+  padding: 0;
+  outline-offset: 4px;
+  cursor: pointer;
+}
+html .front {
+  background: #ca2bb5;
+  color: white;
+  display: block;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 2rem;
+  transform: translateY(-6px);
+}
+html .pushable:active .front {
+  transform: translateY(-2px);
+}
 
 /* Ultra HD screens (2560px and up) */
 /* Extra large screens (1920px and up) */
@@ -319,17 +367,26 @@ html body .footer-container #footer-wrapper .contact-links div .contact-icon {
   html {
     font-size: 10px;
   }
+  html body #main-container #projects .projects-container .project-card {
+    flex: 0 1 299px;
+  }
 }
 /* Medium screens (1366px and up) */
 @media screen and (min-width: 1366px) and (max-width: 1439px) {
   html {
     font-size: 9px;
   }
+  html body #main-container #projects .projects-container .project-card {
+    flex: 0 1 299px;
+  }
 }
 /* Small screens (1280px and up) */
 @media screen and (min-width: 1280px) and (max-width: 1365px) {
   html {
     font-size: 9px;
+  }
+  html body #main-container #projects .projects-container .project-card {
+    flex: 0 1 299px;
   }
 }
 /* Extra small screens (810px and up) */
@@ -339,5 +396,8 @@ html body .footer-container #footer-wrapper .contact-links div .contact-icon {
   }
   html body #main-container #experience .experience-container .experience-jobs-container .job-card {
     width: 270px;
+  }
+  html body #main-container #projects .projects-container .project-card {
+    flex: 0 1 295px;
   }
 }/*# sourceMappingURL=style.css.map */

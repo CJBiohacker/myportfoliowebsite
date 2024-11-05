@@ -3,6 +3,9 @@
   html {
     font-size: 6px;
   }
+  html body #main-container #projects .projects-container .project-card {
+    flex: 0 1 275px;
+  }
 }
 /* Mobile Large screens (up to 428px) */
 @media screen and (max-width: 428px) {
@@ -62,9 +65,6 @@
     text-align: center;
     margin: 0;
     padding: 0 15px;
-  }
-  html body #main-container #profile .profile-container .profile-text-container .pushable:active .front {
-    transform: translateY(-2px);
   }
   html body #main-container #profile .profile-container .profile-photo {
     width: 75dvw;
@@ -164,6 +164,15 @@
     font-size: 6rem;
     text-align: center;
   }
+  html body #main-container #projects .projects-container .project-card .project-text-container {
+    font-size: 2.8rem;
+  }
+  html body #main-container #projects .projects-container .project-card .project-tech-container {
+    font-size: 2.5rem;
+  }
+  html body #main-container #projects .projects-container .project-card .project-btn-container .pushable .front {
+    font-size: 3rem !important;
+  }
   html body .footer-container {
     margin: 0;
   }
@@ -194,6 +203,19 @@
   html body #main-container #about {
     height: auto;
   }
+  html body #projects .projects-container .project-card .project-text-container {
+    font-size: 3rem !important;
+    height: 220px;
+  }
+  html body #projects .projects-container .project-card .project-text-container > h1 {
+    text-align: center;
+  }
+  html body #projects .projects-container .project-card .project-tech-container {
+    font-size: 3rem !important;
+  }
+  html body #projects .projects-container .project-card .project-btn-container .pushable .front {
+    font-size: 3.8rem !important;
+  }
 }
 /* Mobile small screens (up to 378px)  */
 @media (max-width: 378px) {
@@ -205,5 +227,15 @@
   }
   html body #main-container #about .about-container #about-cards-container .about-card .text-card-container .about-card-text {
     font-size: 2rem;
+  }
+  html body #main-container #projects .projects-container .project-card {
+    flex: 0 1 310px;
+  }
+  html body #main-container #projects .projects-container .project-card .project-text-container {
+    font-size: 2.3rem;
+    height: 220px;
+  }
+  html body #main-container #projects .projects-container .project-card .project-btn-container .pushable .front {
+    font-size: 2.5rem !important;
   }
 }/*# sourceMappingURL=mobile-style.css.map */

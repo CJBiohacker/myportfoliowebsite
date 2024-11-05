@@ -2,6 +2,21 @@
 @media screen and (min-width: 429px) and (max-width: 809px) {
   html {
     font-size: 6px;
+
+    body {
+      #main-container {
+        #projects {
+          .projects-title {
+          }
+
+          .projects-container {
+            .project-card {
+              flex: 0 1 275px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -74,16 +89,6 @@
                 text-align: center;
                 margin: 0;
                 padding: 0 15px;
-              }
-
-              .pushable {
-              }
-
-              .front {
-              }
-
-              .pushable:active .front {
-                transform: translateY(-2px);
               }
             }
 
@@ -233,7 +238,22 @@
           }
 
           .projects-container {
-            .projects-cards-container {
+            .project-card {
+              .project-img {
+              }
+              .project-text-container {
+                font-size: 2.8rem;
+              }
+              .project-tech-container {
+                font-size: 2.5rem;
+              }
+              .project-btn-container {
+                .pushable {
+                  .front {
+                    font-size: 3rem !important;
+                  }
+                }
+              }
             }
           }
         }
@@ -282,6 +302,35 @@
           height: auto;
         }
       }
+
+      #projects {
+        .projects-title {
+        }
+
+        .projects-container {
+          .project-card {
+            .project-text-container {
+              font-size: 3rem !important;
+              height: 220px;
+
+              > h1 {
+                text-align: center;
+              }
+            }
+
+            .project-tech-container {
+              font-size: 3rem !important;
+            }
+            .project-btn-container {
+              .pushable {
+                .front {
+                  font-size: 3.8rem !important;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -304,6 +353,30 @@
             .text-card-container
             .about-card-text {
             font-size: 2rem;
+          }
+        }
+
+        #projects {
+          .projects-title {
+          }
+
+          .projects-container {
+            .project-card {
+              flex: 0 1 310px;
+
+              .project-text-container {
+                font-size: 2.3rem;
+                height: 220px;
+              }
+
+              .project-btn-container {
+                .pushable {
+                  .front {
+                    font-size: 2.5rem !important;
+                  }
+                }
+              }
+            }
           }
         }
       }
