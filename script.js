@@ -380,12 +380,10 @@ contactBtn.onclick = () => {
 navActiveBtn.onclick = () => {
   if (!isMenuActive) {
     navActiveBtn.style.borderColor = "white";
-    navMenu.style.display = "flex";
   } else {
     navActiveBtn.style.borderColor = "transparent";
-    navMenu.style.display = "none";
   }
-
+  navMenu.classList.toggle("active");
   isMenuActive = !isMenuActive;
 };
 

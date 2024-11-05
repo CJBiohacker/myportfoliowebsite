@@ -25,20 +25,27 @@
   }
   html body #nav-header .nav-menu {
     font-size: 5rem;
-    display: none;
+    display: flex;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     position: absolute;
     right: 10%;
     top: 15%;
     width: 220px;
+    height: 0;
     padding: 15px;
     border-radius: 8px;
     background-color: rgba(150, 111, 204, 0.8);
+    transition: all 0.5s ease-in-out;
   }
   html body #nav-header .nav-menu > a {
     text-decoration: none;
     color: white;
+  }
+  html body #nav-header .active {
+    opacity: 1;
+    height: 280px;
   }
   html body #main-container {
     margin: 0;
