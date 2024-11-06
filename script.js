@@ -167,7 +167,31 @@ Data fetched from a fake API (Reqres) is displayed it in a user-friendly interfa
     hosted: "N/A",
   },
   {
-    title: "Project 3",
+    title: "Frame Viewer",
+    image: "./images/frameviewer-icon.svg",
+    description: `FrameViewer is a Full Stack application that allows users to upload a video file (via input selection or drag'n'drop), extract the frames from the video, list all saved videos in a table, and view the set of frames by clicking a button`,
+    technologies: ["NodeJS", "React", "Typescript"],
+    repository: "https://github.com/CJBiohacker/FrameViewer-HandTalk",
+    hosted: "N/A",
+  },
+  {
+    title: "URL Shortener",
+    image: "./images/url-shortener-icon.svg",
+    description: `URL Shortener, as the name implies, is a FullStack web application to shorten any URL saved in the database (MongoDB). It can be used to reduce the URL character size to make it easier to share the link. This short link and the link ID generated will be used as a reference to access the original URL`,
+    technologies: ["Javascript", "VueJS", "MongoDB"],
+    repository: "https://github.com/CJBiohacker/vue-url-shortener",
+    hosted: "https://url-shortener-4gcz.onrender.com/",
+  },
+  {
+    title: "EndGame UI (Online Game Streaming)",
+    image: "./images/endgame-icon.svg",
+    description: `As part of the Certified Tech Developer - Full Stack course at Digital House Brasil, this was a FrontEnd prototype of a video game streaming platform. Following a provided wireframe, the team used HTML, CSS, SASS/SCSS and Bootstrap to create a responsive interface.`,
+    technologies: ["HTML", "CSS/SCSS", "Bootstrap"],
+    repository: "https://github.com/CJBiohacker/FrontEnd1-Checkpoint3-DH",
+    hosted: "https://cjbiohacker.github.io/FrontEnd1-Checkpoint3-DH/",
+  },
+  {
+    title: "6",
     image: "./images/googlecloud-logo.svg",
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -175,37 +199,13 @@ Data fetched from a fake API (Reqres) is displayed it in a user-friendly interfa
     hosted: "https://github.com",
   },
   {
-    title: "Project 4",
+    title: "7",
     image: "./images/googlecloud-logo.svg",
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
     technologies: ["HTML", "CSS", "JavaScript"],
     repository: "https://github.com",
     hosted: "https://github.com",
-  },
-  {
-    title: "Project 5",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
-  },
-  {
-    title: "Project 6",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
-  },
-  {
-    title: "Project 7",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
-  },
+  }
 ];
 
 const contactYear = getElementFromId("contact-year");
