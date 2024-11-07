@@ -160,8 +160,7 @@ const projectsInfo = [
   {
     title: "UI-Versity",
     image: "./images/ui-versidade-icon.svg",
-    description: `A Vue.js application that serves as a CRUD system for managing users and resources. It leverages technologies like Vuetify for UI components, Pinia for state management, and Vite for rapid development.
-Data fetched from a fake API (Reqres) is displayed it in a user-friendly interface. It offers features like user registration, login, and resource management. `,
+    description: `A Vue.js web app that serves as a CRUD system for managing users and resources. It leverages technologies like Vuetify for UI components, Pinia for state management, and Vite for rapid development. Data fetched from a fake API (Reqres) is displayed it in a user-friendly interface.`,
     technologies: ["Javascript", "VueJS", "Pinia"],
     repository: "https://github.com/CJBiohacker/teste-tecnico-front",
     hosted: "N/A",
@@ -201,7 +200,7 @@ Data fetched from a fake API (Reqres) is displayed it in a user-friendly interfa
   {
     title: "BienVenido",
     image: "./images/bienvenido-icon.svg",
-    description: `Bienvenido is a digital platform designed to facilitate the integration of Latin American refugees in Brazil. Developed by the Squad 34 team, the application provides essential information about the country, assisting newcomers. Through a complete restructuring, with migration to Java and ReactJS, the project offers a more modern and intuitive user experience, demonstrating the power of technology in promoting social inclusion.`,
+    description: `Bienvenido is a digital platform helping Latin American refugees integrate into Brazilian society. Developed by Squad 34, it provides essential information and a user-friendly interface, powered by Java and ReactJS. It demonstrate the power of technology in promoting social inclusion.`,
     technologies: ["React", "Firebase", "Java"],
     repository:
       "https://github.com/Squad34-Recode/BienVenido-SpringBootReactJS-Entrega4-Final",
