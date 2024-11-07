@@ -199,6 +199,15 @@ Data fetched from a fake API (Reqres) is displayed it in a user-friendly interfa
     hosted: "https://letmeask-rocketseatnwl.web.app/",
   },
   {
+    title: "BienVenido",
+    image: "./images/bienvenido-icon.svg",
+    description: `Bienvenido is a digital platform designed to facilitate the integration of Latin American refugees in Brazil. Developed by the Squad 34 team, the application provides essential information about the country, assisting newcomers. Through a complete restructuring, with migration to Java and ReactJS, the project offers a more modern and intuitive user experience, demonstrating the power of technology in promoting social inclusion.`,
+    technologies: ["React", "Firebase", "Java"],
+    repository:
+      "https://github.com/Squad34-Recode/BienVenido-SpringBootReactJS-Entrega4-Final",
+    hosted: "https://bienvenido-app.web.app/",
+  },
+  {
     title: "Snake Game",
     image: "./images/snakegame-icon.svg",
     description: `This was a personal project created using HTML5 Canvas as a platform to experiment with 2D game development. The core gameplay mechanics, such as snake movement, food generation, and collision detection, were implemented entirely in JavaScript.`,
@@ -206,14 +215,6 @@ Data fetched from a fake API (Reqres) is displayed it in a user-friendly interfa
     repository: "https://github.com/CJBiohacker/Snake-Game-DIO",
     hosted: "https://cjbiohacker.github.io/Snake-Game-DIO/",
   },
-  {
-    title: "BienVenido",
-    image: "./images/bienvenido-icon.svg",
-    description: `Bienvenido is a digital platform designed to facilitate the integration of Latin American refugees in Brazil. Developed by the Squad 34 team, the application provides essential information about the country, assisting newcomers. Through a complete restructuring, with migration to Java and ReactJS, the project offers a more modern and intuitive user experience, demonstrating the power of technology in promoting social inclusion.`,
-    technologies: ["React", "Firebase", "Java"],
-    repository: "https://github.com/Squad34-Recode/BienVenido-SpringBootReactJS-Entrega4-Final",
-    hosted: "https://bienvenido-app.web.app/",
-  }
 ];
 
 const contactYear = getElementFromId("contact-year");
