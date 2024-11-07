@@ -318,7 +318,7 @@ const skillNamesList = getAllElementsFromClass(".skill-name");
 
 for (let i = 0; i < experienceSkillsInfo.length; i++) {
   skillImagesList[i].src = experienceSkillsInfo[i].image;
-  skillNamesList[i].alt = experienceSkillsInfo[i].name;
+  skillImagesList[i].alt = experienceSkillsInfo[i].name;
   skillNamesList[i].innerText = experienceSkillsInfo[i].name;
 }
 
