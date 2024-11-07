@@ -303,6 +303,7 @@ for (const job of experienceJobsInfo) {
   textContainerDiv.appendChild(jobTopicsList);
 
   jobImage.src = job.image;
+  jobImage.alt = job.company;
   jobTitle.innerText = job.position;
   jobDescription.innerText = `${job.company} - ${job.date}`;
 
