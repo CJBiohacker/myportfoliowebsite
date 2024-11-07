@@ -274,7 +274,7 @@ html body #main-container #projects .projects-container .project-card .project-i
   align-self: center;
   padding: 10px;
   border-radius: 8px;
-  width: 100%;
+  width: 95%;
 }
 html body #main-container #projects .projects-container .project-card .project-text-container {
   display: flex;

@@ -150,7 +150,7 @@ const experienceJobsInfo = [
 
 const projectsInfo = [
   {
-    title: "Mini Rutter Shopify Rest API",
+    title: "Mini Rutter Shopify",
     image: "./images/mini-rutter-icon.svg",
     description: `A BackEnd service responsible to fetch the products and orders from simulated Rutter shopify platform and save it in a database of my choice (NoSQL Firetore Database).`,
     technologies: ["NodeJS", "TypeScript", "Firebase"],
@@ -183,28 +183,36 @@ Data fetched from a fake API (Reqres) is displayed it in a user-friendly interfa
     hosted: "https://url-shortener-4gcz.onrender.com/",
   },
   {
-    title: "EndGame UI (Online Game Streaming)",
+    title: "EndGame",
     image: "./images/endgame-icon.svg",
-    description: `As part of the Certified Tech Developer - Full Stack course at Digital House Brasil, this was a FrontEnd prototype of a video game streaming platform. Following a provided wireframe, the team used HTML, CSS, SASS/SCSS and Bootstrap to create a responsive interface.`,
+    description: `As part of the Certified Tech Developer - Full Stack course at Digital House Brasil, this was a FrontEnd prototype of a cloud gaming platform. Following a provided wireframe, the team used HTML, CSS, SASS/SCSS and Bootstrap plus creativity to create a an unique UI (User Interface).`,
     technologies: ["HTML", "CSS/SCSS", "Bootstrap"],
     repository: "https://github.com/CJBiohacker/FrontEnd1-Checkpoint3-DH",
     hosted: "https://cjbiohacker.github.io/FrontEnd1-Checkpoint3-DH/",
   },
   {
-    title: "6",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
+    title: "Let me Ask",
+    image: "./images/letmeask-icon.svg",
+    description: `Let Me Ask is a web application that to create custom chat rooms. Developed with React, Node.js, and Firebase, it utilizes Google authentication and a NoSQL database to ensure security and scalability. Users can create their own rooms, invite friends, and participate in real-time discussions`,
+    technologies: ["React", "Firebase", "Typescript"],
+    repository: "https://github.com/CJBiohacker/letmeask",
+    hosted: "https://letmeask-rocketseatnwl.web.app/",
   },
   {
-    title: "7",
-    image: "./images/googlecloud-logo.svg",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis, justo nec volutpat.`,
+    title: "Snake Game",
+    image: "./images/snakegame-icon.svg",
+    description: `This was a personal project created using HTML5 Canvas as a platform to experiment with 2D game development. The core gameplay mechanics, such as snake movement, food generation, and collision detection, were implemented entirely in JavaScript.`,
     technologies: ["HTML", "CSS", "JavaScript"],
-    repository: "https://github.com",
-    hosted: "https://github.com",
+    repository: "https://github.com/CJBiohacker/Snake-Game-DIO",
+    hosted: "https://cjbiohacker.github.io/Snake-Game-DIO/",
+  },
+  {
+    title: "BienVenido",
+    image: "./images/bienvenido-icon.svg",
+    description: `Bienvenido is a digital platform designed to facilitate the integration of Latin American refugees in Brazil. Developed by the Squad 34 team, the application provides essential information about the country, assisting newcomers. Through a complete restructuring, with migration to Java and ReactJS, the project offers a more modern and intuitive user experience, demonstrating the power of technology in promoting social inclusion.`,
+    technologies: ["React", "Firebase", "Java"],
+    repository: "https://github.com/Squad34-Recode/BienVenido-SpringBootReactJS-Entrega4-Final",
+    hosted: "https://bienvenido-app.web.app/",
   }
 ];
 
@@ -247,6 +255,7 @@ const aboutCardClass = getAllElementsFromClass(".about-card");
 
 for (let i = 0; i < 3; i++) {
   aboutCardClass[i].childNodes[0].src = aboutCardInfo[i].image;
+  aboutCardClass[i].childNodes[0].alt = aboutCardInfo[i].title;
   aboutCardClass[i].childNodes[1].childNodes[0].innerText =
     aboutCardInfo[i].title;
   aboutCardClass[i].childNodes[1].childNodes[1].innerText =
@@ -308,6 +317,7 @@ const skillNamesList = getAllElementsFromClass(".skill-name");
 
 for (let i = 0; i < experienceSkillsInfo.length; i++) {
   skillImagesList[i].src = experienceSkillsInfo[i].image;
+  skillNamesList[i].alt = experienceSkillsInfo[i].name;
   skillNamesList[i].innerText = experienceSkillsInfo[i].name;
 }
 
